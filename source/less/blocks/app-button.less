@@ -1,0 +1,29 @@
+.app-btn {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 250px;
+  min-height: 60px;
+  padding: 5px 10px;
+
+  font-weight: 700;
+
+  color: var(--color-font-secondary);
+  background-color: var(--color-accent);
+  border-radius: 10px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+
+    width: 212px;
+    height: 100%;
+
+    background-color: #f5383859;
+    filter: blur(54px);
+  }
+}

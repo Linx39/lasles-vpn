@@ -1,0 +1,150 @@
+.header {
+  min-height: var(--sm-header-height);
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media (min-width: @xl-width) {
+    min-height: var(--xl-header-height);
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+
+  height: 100%;
+
+  @media (min-width: @md-width) {
+  }
+
+  @media (min-width: @xl-width) {
+    justify-content: space-between;
+  }
+}
+
+.header__logo {
+  flex-shrink: 0;
+
+  margin-right: auto;
+}
+
+.header__nav {
+  .wrapper-padding();
+  max-width: var(--sm-max-width);
+
+  background-color: var(--color-back-basic);
+
+  @media (min-width: @xl-width) {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    max-width: unset;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.header__nav-top {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+
+  min-height: var(--sm-header-height);
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media (min-width: @xl-width) {
+    display: none;
+  }
+}
+
+.header-nav__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  padding: 30px 0;
+  border-top: 1px solid currentColor;
+
+  @media (min-width: @xl-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+
+    padding: 0;
+
+    border-top: none;
+  }
+}
+
+.header__site-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+
+  @media (min-width: @xl-width) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.header__site-link {
+  padding: 6px 0;
+
+  @media (min-width: @xl-width) {
+    padding: 13px 0;
+  }
+}
+
+.header__user-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+
+  @media (min-width: @xl-width) {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.header__user-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  min-height: 45px;
+  padding: 5px 10px;
+
+  font-weight: 500;
+
+  &--in {
+    @media (min-width: @xl-width) {
+      width: auto;
+      border: none;
+    }
+  }
+
+  &--up {
+    color: var(--color-accent);
+
+    border: 1px solid currentColor;
+    border-radius: 50px;
+
+    @media (min-width: @xl-width) {
+      width: 150px;
+    }
+  }
+}
+
+.header__open-btn {
+  @media (min-width: @xl-width) {
+    display: none;
+  }
+}

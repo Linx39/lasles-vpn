@@ -1,0 +1,28 @@
+.page {
+  min-width: @min-width;
+  height: 100%;
+
+  font-family: var(--font-page);
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+
+  & b {
+    font-weight: 700;
+  }
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  margin: 0;
+
+  color: var(--color-font-basic);
+  background-color: var(--color-back-basic);
+}
+
+.page__main {
+  flex-grow: 1;
+}
