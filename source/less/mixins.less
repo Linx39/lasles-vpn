@@ -1,11 +1,8 @@
-.wrapper-width {
+.container {
   width: 100%;
-
-  // @media (min-width: @xl-width) {
-    max-width: @max-width;
-    margin-right: auto;
-    margin-left: auto;
-  // }
+  max-width: @max-width;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .wrapper-padding {
@@ -23,25 +20,16 @@
   }
 
   @media (min-width: @xxl-width) {
-    margin-right: auto;
-    margin-left: auto;
+    // margin-right: auto;
+    // margin-left: auto;
     padding-right: var(--xxl-padding);
     padding-left: var(--xxl-padding);
   }
 }
 
 .wrapper {
-  .wrapper-width();
+  .container();
   .wrapper-padding();
-}
-
-.container {
-  max-width: var(--md-max-width);
-  margin: 0 auto;
-
-  @media (min-width: @xl-width) {
-    max-width: unset;
-  }
 }
 
 .burger-icon(@width, @height) {
