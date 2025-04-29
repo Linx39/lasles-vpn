@@ -1,0 +1,128 @@
+.statistics {
+  padding-top: 33px;
+  padding-bottom: 63px;
+}
+
+.statistics__list {
+  position: relative;
+
+  max-width: var(--sm-max-width);
+  margin: 0 auto;
+
+  background-color: var(--color-back-basic);
+  border-radius: 10px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 28%;
+    z-index: -1;
+
+    width: 94%;
+    height: 95%;
+    margin: 0 auto;
+
+    border-radius: 10px;
+
+    background-color: var(--color-shadow);
+    opacity: .06;
+    filter: blur(114px)
+  }
+
+  @media (min-width: @md-width) {
+    // max-width: var(--md-max-width);
+  }
+
+  @media (min-width: @xl-width) {
+    display: grid;
+    grid-template-columns: 1fr 38% 1fr;
+
+    max-width: unset;
+
+  }
+}
+
+.statistics__item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 36.5px;
+
+  min-height: 160px;
+  padding: 20px;
+
+  &:not(:last-of-type)::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -1px;
+
+    width: 83%;
+    height: 2px;
+    margin: 0 auto;
+
+    background-color: var(--color-grey-04);
+  }
+
+  @media (min-width: @xl-width) {
+    min-height: 200px;
+
+    &:not(:last-of-type)::after {
+      left: unset;
+      right: -1px;
+      top: 0;
+      bottom: 0;
+
+      height: 63%;
+      width: 2px;
+      margin: auto 0;
+    }
+  }
+}
+
+.statistics__icon {
+  justify-self: end;
+  grid-row: 1 / 3;
+
+  width: 55px;
+  height: 55px;
+  margin: auto 0;
+
+  background-color: var(--color-pink);
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--user {
+    background-image: url("../images/icons/user.svg");
+    background-size: 17px 19px;
+  }
+
+  &--location {
+    background-image: url("../images/icons/location.svg");
+    background-size: 14px 21px;
+  }
+
+  &--server {
+    background-image: url("../images/icons/server.svg");
+    background-size: 21px 19px;
+  }
+}
+
+.statistics__value {
+  align-self: end;
+
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--color-font-title);
+}
+
+.statistics__name {
+  font-size: 20px;
+  line-height: 30px;
+
+}

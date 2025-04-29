@@ -47,10 +47,10 @@
 
               <ul class="header__user-list">
                 <li class="header__user-item">
-                  <a class="header__user-link header__user-link--in" href="#">Sign In</a>
+                  <a class="header__user-link header__user-link--in app-btn-round" href="#">Sign In</a>
                 </li>
                 <li class="header__user-item">
-                  <a class="header__user-link header__user-link--up" href="#">Sign Up</a>
+                  <a class="header__user-link header__user-link--up app-btn-round" href="#">Sign Up</a>
                 </li>
               </ul>
             </div>
@@ -69,7 +69,7 @@
           <h1 class="hero__title wrapper-padding">Want anything to be easy with <span>LaslesVPN</span>.</h1>
           <p class="hero__text wrapper-padding">Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from us.</p>
           <div class="hero__btn-container wrapper-padding">
-            <a class="hero__btn app-btn" href="#">Get Started</a>
+            <a class="hero__btn app-btn-rect" href="#">Get Started</a>
           </div>
 
           <div class="hero__bg">
@@ -80,20 +80,22 @@
 
       <section class="statistics">
         <div class="statistics__wrapper wrapper">
+          <h2 class="visually-hidden">Our statistics</h2>
+
           <ul class="statistics__list">
             <li class="statistics__item">
-              <span class="statistics__value">90</span>
-              <span class="statistics__symbol">+</span>
+              <div class="statistics__icon statistics__icon--user"></div>
+              <span class="statistics__value"><span class="statistics__number">90</span>+</span>
               <span class="statistics__name">Users</span>
             </li>
             <li class="statistics__item">
-              <span class="statistics__value">30</span>
-              <span class="statistics__symbol">+</span>
+              <div class="statistics__icon statistics__icon--location"></div>
+              <span class="statistics__value"><span class="statistics__number">30</span>+</span>
               <span class="statistics__name">Locations</span>
             </li>
             <li class="statistics__item">
-              <span class="statistics__value">50</span>
-              <span class="statistics__symbol">+</span>
+              <div class="statistics__icon statistics__icon--server"></div>
+              <span class="statistics__value"><span class="statistics__number">50</span>+</span>
               <span class="statistics__name">Servers</span>
             </li>
           </ul>
@@ -101,13 +103,13 @@
       </section>
 
       <section class="features">
-        <div class="features__wrapper container">
+        <div class="features__wrapper wrapper">
+          <h2 class="features__title title">We Provide Many Features You Can Use</h2>
+          <p class="features__text">You can explore the features that we provide with fun and have their own functions each feature.</p>
+
           <div class="features__bg">
             <img src="./images/features.webp" alt="Декоративное изображение.">
           </div>
-
-          <h2 class="features__title title wrapper-padding">We Provide Many Features You Can Use</h1>
-          <p class="features__text wrapper-padding">You can explore the features that we provide with fun and have their own functions each feature.</p>
 
           <ul class="features__list">
             <li class="features__item">Powerfull online protection.</li>
@@ -118,79 +120,87 @@
         </div>
       </section>
 
-      <section class="pricing">
-        <div class="pricing__wrapper wrapper">
-          <h2 class="pricing__title title">Choose Your Plan</h2>
-          <p class="pricing__text">Let's choose the package that is best for you and explore it happily and cheerfully.</p>
+      <div class="page__bg">
+        <section class="pricing">
+          <div class="pricing__wrapper wrapper">
+            <h2 class="pricing__title title">Choose Your Plan</h2>
+            <p class="pricing__text">Let's choose the package that is best for you and explore it happily and cheerfully.</p>
 
-          <div class="pricing__list">
-            <div class="pricing__item plan">
-              <h3 class="plan__title">Free Plan</h3>
-              <ul class="plan__list">
-                <li class="plan__item">Unlimited Bandwitch</li>
-                <li class="plan__item">Encrypted Connection</li>
-                <li class="plan__item">No Traffic Logs</li>
-                <li class="plan__item">Works on All Devices</li>
-              </ul>
-              <p class="plan__value">Free</p>
-              <a class="plan__btn" href="#">Select</a>
+            <div class="pricing__list">
+              <div class="pricing__item plan">
+                <h3 class="plan__title">Free Plan</h3>
+                <ul class="plan__list">
+                  <li class="plan__item">Unlimited Bandwitch</li>
+                  <li class="plan__item">Encrypted Connection</li>
+                  <li class="plan__item">No Traffic Logs</li>
+                  <li class="plan__item">Works on All Devices</li>
+                </ul>
+                <p class="plan__value"><b>Free</b></p>
+                <a class="plan__btn  app-btn-round" href="#">Select</a>
+              </div>
+
+              <div class="pricing__item plan">
+                <h3 class="plan__title">Standard Plan</h3>
+                <ul class="plan__list">
+                  <li class="plan__item">Unlimited Bandwitch</li>
+                  <li class="plan__item">Encrypted Connection</li>
+                  <li class="plan__item">No Traffic Logs</li>
+                  <li class="plan__item">Works on All Devices</li>
+                  <li class="plan__item">Connect Anyware</li>
+                </ul>
+                <p class="plan__value"><b>$9</b> / mo</p>
+                <a class="plan__btn  app-btn-round" href="#">Select</a>
+              </div>
+
+              <div class="pricing__item plan">
+                <h3 class="plan__title">Premium Plan</h3>
+                <ul class="plan__list">
+                  <li class="plan__item">Unlimited Bandwitch</li>
+                  <li class="plan__item">Encrypted Connection</li>
+                  <li class="plan__item">No Traffic Logs</li>
+                  <li class="plan__item">Works on All Devices</li>
+                  <li class="plan__item">Connect Anyware</li>
+                  <li class="plan__item">Get New Features</li>
+                </ul>
+                <p class="plan__value"><b>$12</b> / mo</p>
+                <a class="plan__btn  app-btn-round" href="#">Select</a>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div class="pricing__item plan">
-              <h3 class="plan__title">Standard Plan</h3>
-              <ul class="plan__list">
-                <li class="plan__item">Unlimited Bandwitch</li>
-                <li class="plan__item">Encrypted Connection</li>
-                <li class="plan__item">No Traffic Logs</li>
-                <li class="plan__item">Works on All Devices</li>
-                <li class="plan__item">Connect Anyware</li>
-              </ul>
-              <p class="plan__value"><span>$9</span> / mo</p>
-              <a class="plan__btn" href="#">Select</a>
-            </div>
+        <section class="locations">
+          <div class="locations__wrapper wrapper">
+            <h2 class="locations__title">Huge Global Network of Fast VPN</h2>
+            <p class="locations__text">See LaslesVPN everywhere to make it easier for you when you move locations.</p>
 
-            <div class="pricing__item plan">
-              <h3 class="plan__title">Premium Plan</h3>
-              <ul class="plan__list">
-                <li class="plan__item">Unlimited Bandwitch</li>
-                <li class="plan__item">Encrypted Connection</li>
-                <li class="plan__item">No Traffic Logs</li>
-                <li class="plan__item">Works on All Devices</li>
-                <li class="plan__item">Connect Anyware</li>
-                <li class="plan__item">Get New Features</li>
-              </ul>
-              <p class="plan__value"><span>$12</span> / mo</p>
-              <a class="plan__btn" href="#">Select</a>
+            <div class="locations__bg">
+              <img src="./images/locations.webp" alt="Декоративное изображение.">
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      <section class="locations">
-        <div class="locations__wrapper wrapper">
-          <h2 class="locations__title">Huge Global Network of Fast VPN</h2>
-          <p class="locations__text">See LaslesVPN everywhere to make it easier for you when you move locations.</p>
+      <section class="brands">
+        <div class="brands__wrapper wrapper">
+          <h2 class="visually-hidden">Our brands.</h2>
 
-          <div class="locations__bg">
-            <img src="./images/locations.webp" alt="Декоративное изображение.">
-          </div>
-        </div>
-
-        <div class="locations__list">
-          <div class="locations__item">
-            <img src="./images/netflix.webp" alt="Логотип netflix." width="200" height="114">
-          </div>
-          <div class="locations__item">
-            <img src="./images/reddit.webp" alt="Логотип reddit." width="157" height="52">
-          </div>
-          <div class="locations__item">
-            <img src="./images/amazon.webp" alt="Логотип amazon." width="278" height="210">
-          </div>
-          <div class="locations__item">
-            <img src="./images/discord.webp" alt="Логотип discord." width="188" height="64">
-          </div>
-          <div class="locations__item">
-            <img src="./images/spotify.webp" alt="Логотип spotify." width="172" height="52">
+          <div class="brands__list">
+            <div class="brands__item">
+              <img src="./images/netflix.webp" alt="Логотип netflix." width="200" height="114">
+            </div>
+            <div class="brands__item">
+              <img src="./images/reddit.webp" alt="Логотип reddit." width="157" height="52">
+            </div>
+            <div class="brands__item">
+              <img src="./images/amazon.webp" alt="Логотип amazon." width="278" height="210">
+            </div>
+            <div class="brands__item">
+              <img src="./images/discord.webp" alt="Логотип discord." width="188" height="64">
+            </div>
+            <div class="brands__item">
+              <img src="./images/spotify.webp" alt="Логотип spotify." width="172" height="52">
+            </div>
           </div>
         </div>
       </section>

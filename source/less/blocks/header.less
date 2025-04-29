@@ -114,17 +114,11 @@
 }
 
 .header__user-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   width: 100px;
-  min-height: 45px;
-  padding: 5px 10px;
-
-  font-weight: 500;
 
   &--in {
+    color: inherit;
+
     @media (min-width: @xl-width) {
       width: auto;
       border: none;
@@ -132,11 +126,6 @@
   }
 
   &--up {
-    color: var(--color-accent);
-
-    border: 1px solid currentColor;
-    border-radius: 50px;
-
     @media (min-width: @xl-width) {
       width: 150px;
     }

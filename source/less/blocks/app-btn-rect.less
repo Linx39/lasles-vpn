@@ -1,4 +1,4 @@
-.app-btn {
+.app-btn-rect {
   position: relative;
 
   display: flex;
@@ -18,12 +18,17 @@
   &::before {
     position: absolute;
     content: "";
-    top: 25px;
+    top: 43%;
 
-    width: 212px;
+    width: 85%;
     height: 100%;
 
     background-color: #f5383859;
     filter: blur(54px);
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
   }
 }

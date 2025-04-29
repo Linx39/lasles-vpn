@@ -1,0 +1,89 @@
+.features {
+  padding-top: 33px;
+  padding-bottom: 127px;
+}
+
+.features__wrapper {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: @xl-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr min-content min-content;
+    gap: 20px 50px;
+  }
+}
+
+.features__title {
+  text-align: center;
+
+  @media (min-width: @xl-width){
+    align-self: end;
+
+    text-align: left;
+  }
+}
+
+.features__text {
+  text-align: center;
+
+  @media (min-width: @xl-width) {
+    text-align: left;
+  }
+}
+
+.features__bg {
+  width: 100%;
+  max-width: var(--md-max-width);
+  margin: 40px auto;
+
+  @media (min-width: @xl-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    align-self: center;
+    justify-self: center;
+
+    width: auto;
+    max-width: unset;
+    margin: 0;
+  }
+}
+
+.features__bg img {
+  width: 100%;
+  aspect-ratio: 510/ 416;
+  object-fit: contain;
+}
+
+.features__list {
+  justify-self: center;
+
+  display: grid;
+  gap: 15px;
+
+  @media (min-width: @xl-width) {
+    justify-self: start;
+  }
+}
+
+.features__item {
+  position: relative;
+
+  padding-left: 34px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 2px;
+    top: 0;
+    bottom: 0;
+
+    width: 21px;
+    height: 21px;
+
+    background-image: url("../images/icons/check-1.svg");
+    background-size: 21px 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

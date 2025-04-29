@@ -1,0 +1,52 @@
+.app-btn-round {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 45px;
+  padding: 5px 10px;
+
+  font-weight: 500;
+
+  color: var(--color-accent);
+
+  border: 1px solid var(--color-accent);
+  border-radius: 50px;
+
+  transition: color .5s, background-color .5s, opacity .5s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 38%;
+
+    width: 68%;
+    height: 100%;
+
+    border-radius: 60px;
+
+    background-color: #f5383859;
+    filter: blur(54px);
+
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-font-secondary);
+    background-color: var(--color-accent);
+
+    outline: none;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: @xl-width) {
+    width: 150px;
+  }
+}
