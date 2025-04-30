@@ -1,0 +1,88 @@
+.subscribe {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 50%;
+
+    background-color: var(--color-back-additional);
+  }
+}
+
+.subscribe__wrapper {
+}
+
+.subscribe__subwrapper {
+  position: relative;
+
+  display: grid;
+  gap: 20px;
+
+  padding: 58.5px 70px;
+
+  background-color: var(--color-back-basic);
+  border-radius: 10px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 7%;
+    z-index: -1;
+
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+
+    background-color: var(--color-shadow);
+    filter: blur(114px);
+    opacity: .06;
+  }
+
+  @media (min-width: @xl-width) {
+    grid-template-columns: 1fr min-content;
+    gap: 20px 200px;
+  }
+
+}
+
+.subscribe__title {
+  text-align: center;
+
+  @media (min-width: @xl-width) {
+    text-align: left;
+  }
+
+}
+
+.subscribe__text {
+  text-align: center;
+
+  @media (min-width: @xl-width) {
+    text-align: left;
+  }
+}
+
+.subscribe__btn {
+  justify-self: center;
+
+  margin-top: 40px;
+
+  @media (min-width: @xl-width) {
+    grid-column: 2 / -1;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: end;
+
+    margin-top: 0;
+  }
+
+}

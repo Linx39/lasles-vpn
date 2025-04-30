@@ -22,7 +22,13 @@
 
 .pricing__list {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
+
+  overflow-x: auto;
+}
+
+.pricing__item {
+  flex-shrink: 0;
 }
