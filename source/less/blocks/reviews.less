@@ -1,10 +1,13 @@
 .reviews {
   padding-top: 33px;
   padding-bottom: 65px;
+
+  overflow: hidden;
 }
 
 .reviews__wrapper {
-
+  // display: grid;
+  // gap: 20px;
 }
 
 .reviews__title {
@@ -17,21 +20,40 @@
   text-align: center;
 }
 
+.reviews__slider {
+  // margin-left: 0;
+  // margin-right: 0;
+
+  overflow: visible;
+}
+
 .reviews__list {
   display: flex;
-  gap: 50px;
 
+  height: auto;
   padding-top: 60px;
   padding-bottom: 60px;
-
-  overflow-x: auto;
 }
 
 .reviews__item {
   flex-shrink: 0;
+  height: auto;
 }
 
-.reviews__navigation {
+.reviews__control {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+}
+
+.reviews__pagination {
+  margin-right: auto;
+}
+
+.reviews__slider .reviews__pagination {
+  top: 0;
+  bottom: 0;
+  left: 0 !important;
+  // left: -20% !important;
+  transform: none !important;
 }

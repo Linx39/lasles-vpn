@@ -1,5 +1,6 @@
 .navigation-btn {
   position: relative;
+  flex-shrink: 0;
 
   width: 60px;
   height: 60px;
@@ -9,7 +10,9 @@
 
   background-color: var(--color-back-basic);
 
-  transition: background-color .5s;
+  opacity: 1;
+
+  transition: background-color .5s, opacity .5s;
 
   &::after {
     position: absolute;
@@ -22,7 +25,7 @@
 
     background-color: var(--color-accent);
 
-    mask-image: url("../../images/icons/arrow.svg");
+    mask-image: url("../images/icons/arrow.svg");
     mask-size: 20px 18px;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -32,7 +35,16 @@
     transform: rotate(180deg);
   }
 
-  &:hover,
+  &--disabled {
+    opacity: .2;
+    cursor: unset;
+  }
+
+  &--lock {
+    display: none;
+  }
+
+  &:not(&--disabled)&:hover,
   &:focus-visible {
     background-color: var(--color-accent);
 

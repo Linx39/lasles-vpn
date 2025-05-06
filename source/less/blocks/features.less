@@ -1,11 +1,17 @@
 .features {
   padding-top: 33px;
-  padding-bottom: 127px;
+  padding-bottom: 65px;
 }
 
 .features__wrapper {
   display: grid;
   gap: 20px;
+
+  @media (min-width: @md-width) {
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: 1fr min-content min-content;
+    gap: 20px 50px;
+  }
 
   @media (min-width: @xl-width) {
     grid-template-columns: 1fr 1fr;
@@ -17,7 +23,12 @@
 .features__title {
   text-align: center;
 
+  @media (min-width: @md-width) {
+    grid-column: 1 / -1;
+  }
+
   @media (min-width: @xl-width){
+    grid-column: auto;
     align-self: end;
 
     text-align: left;
@@ -27,7 +38,12 @@
 .features__text {
   text-align: center;
 
+  @media (min-width: @md-width) {
+    grid-column: 1 / -1;
+  }
+
   @media (min-width: @xl-width) {
+    grid-column: auto;
     text-align: left;
   }
 }
@@ -61,8 +77,14 @@
   display: grid;
   gap: 15px;
 
+  @media (min-width: @md-width) {
+    justify-self: start;
+    align-self: center;
+  }
+
   @media (min-width: @xl-width) {
     justify-self: start;
+    align-self: auto;
   }
 }
 

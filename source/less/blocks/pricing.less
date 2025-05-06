@@ -1,6 +1,8 @@
 .pricing {
   padding-top: 80px;
   padding-bottom: 80px;
+
+  overflow: hidden;
 }
 
 .pricing__wrapper {
@@ -17,18 +19,50 @@
   margin-bottom: 60px;
 
   text-align: center;
+}
 
+.pricing__slider {
+  overflow: visible;
 }
 
 .pricing__list {
   display: flex;
-  // flex-wrap: wrap;
-  gap: 50px;
-  justify-content: center;
+  height: auto;
 
-  overflow-x: auto;
+  // margin-bottom: 60px;
+
+  // @media (min-width: @xl-width) {
+  //   gap: 50px;
+  //   justify-content: center;
+
+  //   margin-bottom: 0;
+  // }
 }
 
 .pricing__item {
   flex-shrink: 0;
+}
+
+.pricing__control {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  margin-top: 60px;
+
+  // @media (min-width: @xl-width) {
+  //   display: none;
+  // }
+}
+
+.pricing__pagination {
+  margin-right: auto;
+}
+
+.pricing__slider .pricing__pagination {
+  top: 0;
+  bottom: 0;
+  left: 0 !important;
+  // left: -20% !important;
+  transform: none !important;
 }

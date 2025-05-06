@@ -1,16 +1,28 @@
 .hero {
   padding-top: 33px;
-  padding-bottom: 70px;
+  padding-bottom: 65px;
 }
 
 .hero__wrapper {
   display: grid;
   gap: 20px;
 
+  @media (min-width: @md-width) {
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content min-content 1fr;
+    gap: 20px 50px;
+  }
+
   @media (min-width: @xl-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content 1fr;
     gap: 20px 50px;
+
+    padding-right: 0;
+  }
+
+  @media (min-width: @xxl-width) {
+    padding-right: 83px;
   }
 }
 
@@ -27,11 +39,11 @@
   }
 
   @media (min-width: @md-width) {
+    grid-column: 1 / -1;
   }
 
   @media (min-width: @xl-width) {
-    padding-right: 0;
-
+    grid-column: auto;
     text-align: left;
   }
 }
@@ -39,36 +51,37 @@
 .hero__text {
   text-align: center;
 
-  @media (min-width: @xl-width) {
-    padding-right: 0;
+  @media (min-width: @md-width) {
+    grid-column: 1 / -1;
+  }
 
+  @media (min-width: @xl-width) {
+    grid-column: auto;
     text-align: left;
   }
 }
 
-.hero__btn-container{
-  order: 1;
-  margin-top: 30px;
-
-  @media (min-width: @xl-width) {
-    padding-right: 0;
-  }
-}
-
 .hero__btn {
-  margin: 0 auto;
+  order: 1;
+  // margin: 0 auto;
+  justify-self: center;
+
+  @media (min-width: @md-width) {
+    order: unset;
+    justify-self: start;
+    align-self: center;
+  }
 
   @media (min-width: @xl-width) {
-    margin-left: 0;
-    margin-right: 0;
+    // margin-left: 0;
+    // margin-right: 0;
   }
 }
 
 .hero__bg {
   width: 100%;
-  // aspect-ratio: 612 / 383;
   max-width: var(--md-max-width);
-  margin: 0 auto;
+  margin: 40px auto;
 
   @media (min-width: @xl-width) {
     grid-column: 2 / -1;
@@ -77,10 +90,6 @@
 
     max-width: unset;
     margin: 0;
-  }
-
-  @media (min-width: @xxl-width) {
-    padding-right: 83px;
   }
 }
 

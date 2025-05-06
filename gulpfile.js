@@ -97,7 +97,7 @@ export const copy = (done) => {
     `${SOURCE_FOLDER}/fonts/*.*`,
     // `${SOURCE_FOLDER}/video/*.*`,
     // `${SOURCE_FOLDER}/imask/*.*`,
-    // `${SOURCE_FOLDER}/swiper/*.*`,
+    `${SOURCE_FOLDER}/swiper/*.*`,
     // `${SOURCE_FOLDER}/fancybox/*.*`,
     // `${SOURCE_FOLDER}/pristine/*.*`,
     // `${SOURCE_FOLDER}/favicons/*.*`,
