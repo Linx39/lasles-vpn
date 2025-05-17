@@ -1,4 +1,5 @@
 export const Width = {
+  SM: 576,
   MD: 768,
   XL: 1200,
   XXL: 1400,

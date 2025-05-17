@@ -6,7 +6,9 @@
   grid-template-rows: min-content 1fr;
   gap: 20px;
 
-  width: 400px;
+  // width: 400px;
+  width: 100%;
+  max-width: 400px;
   min-height: 230px;
   padding: 30px;
 
@@ -32,7 +34,7 @@
     transition: opacity .5s;
   }
 
-  &--active {
+  &&--active {
     border-color: var(--color-accent);
 
     &::before {

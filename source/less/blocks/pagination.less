@@ -1,12 +1,9 @@
 .pagination {
-  // position: static;
-  position: relative;
+  position: static;
+  // position: relative;
+
   display: flex;
   align-items: center;
-  // gap: 15px;
-
-  // transform: none !important;
-  // width: auto !important;
 
   &--lock {
     display: none;
@@ -18,18 +15,22 @@
 
   position: relative;
 
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 45px;
-  height: 15px;
+  height: 45px;
+  margin: 7.5px 0;
+
+  transition: left .2s;
 
   &::after {
     position: absolute;
     content: "";
-    inset: 0;
 
     width: 15px;
     height: 15px;
-    margin: 0 auto;
 
     background-color: var(--color-grey-02);
     border-radius: 7.5px;

@@ -1,50 +1,49 @@
-import { handleSwiperMode } from "./swiper-mode.js";
-import { Width, Padding } from "./const.js";
+import { setPaginationPosition } from "./swiper-mode.js";
+import { Width } from "./const.js";
 
-const PRICING_SLIDER_CLASS = 'pricing__slider';
+const PRICING_SLIDER_CLASS = 'pricing-slider';
 
 const initPricingSwiper = () => {
   const swiper = new Swiper(`.${PRICING_SLIDER_CLASS}`, {
     slidesPerView: 'auto',
     spaceBetween: 50,
-    slidesOffsetBefore: 0,
-    slidesOffsetAfter: 0,
-    centeredSlides: true,
     slideActiveClass: 'plan--current',
     touchReleaseOnEdges: true,
-    parallax: true,
+    slideToClickedSlide: true,
+    centerInsufficientSlides: true,
+    slideToClickedSlide: true,
+    centeredSlides: true,
+    // parallax: true,
 
     breakpoints: {
       [Width.MD]: {
-        // slidesOffsetBefore: Padding.MD,
-        // slidesOffsetAfter: Padding.MD,
         centeredSlides: false,
-        // initialSlide: 1,
       },
     },
 
     navigation: {
-      prevEl: '.pricing__navigation-btn--prev',
-      nextEl: '.pricing__navigation-btn--next',
+      prevEl: '.pricing-btn-prev',
+      nextEl: '.pricing-btn-next',
       disabledClass: 'navigation-btn--disabled',
-      lockClass:'navigation-btn--lock',
+      lockClass: 'navigation-btn--lock',
     },
 
     pagination: {
-      el: '.pricing__pagination',
+      el: '.pricing-pagination',
       clickable: true,
       bulletClass: 'pagination__btn',
       bulletActiveClass: 'pagination__btn--current',
       lockClass: 'pagination--lock',
       dynamicBullets: true,
-      dynamicMainBullets: 4,
+      dynamicMainBullets: 1,
     },
   });
+
+  setPaginationPosition(swiper);
 
   return swiper;
 };
 
 if (document.querySelector(`.${PRICING_SLIDER_CLASS}`)) {
-  // handleSwiperMode(initPricingSwiper);
   initPricingSwiper();
 }

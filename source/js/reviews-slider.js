@@ -1,60 +1,47 @@
-import { handleSwiperMode } from "./swiper-mode.js";
-import { Width, Padding } from "./const.js";
+import { setPaginationPosition } from "./swiper-mode.js";
+import { Width } from "./const.js";
 
-const REVIEWS_SLIDER_CLASS = 'reviews__slider';
+const REVIEWS_SLIDER_CLASS = 'reviews-slider';
 
 const initReviewsSwiper = () => {
   const swiper = new Swiper(`.${REVIEWS_SLIDER_CLASS}`, {
     slidesPerView: 'auto',
     spaceBetween: 50,
-    // slidesOffsetBefore: Padding.SM,
-    // slidesOffsetAfter: Padding.SM,
     slideActiveClass: 'user--active',
     touchReleaseOnEdges: true,
+    centerInsufficientSlides: true,
+    slideToClickedSlide: true,
+    centeredSlides: true,
 
     navigation: {
-      prevEl: '.reviews__navigation-btn--prev',
-      nextEl: '.reviews__navigation-btn--next',
+      prevEl: '.reviews-btn-prev',
+      nextEl: '.reviews-btn-next',
       disabledClass: 'navigation-btn--disabled',
-      // lockClass:'navigation-btn--lock',
+      lockClass:'navigation-btn--lock',
     },
 
     pagination: {
-      el: '.reviews__pagination',
+      el: '.reviews-pagination',
       clickable: true,
       bulletClass: 'pagination__btn',
       bulletActiveClass: 'pagination__btn--current',
-      // lockClass: 'pagination--lock',
+      lockClass: 'pagination--lock',
       dynamicBullets: true,
-      dynamicMainBullets: 2,
+      dynamicMainBullets: 1,
     },
 
     breakpoints: {
       [Width.MD]: {
-        // slidesOffsetBefore: Padding.MD,
-        // slidesOffsetAfter: Padding.MD,
-      },
-    },
-
-    breakpoints: {
-      [Width.XL]: {
-        // slidesOffsetBefore: Padding.XL,
-        // slidesOffsetAfter: Padding.XL,
-      },
-    },
-
-    breakpoints: {
-      [Width.XXL]: {
-        // slidesOffsetBefore: Padding.XXL,
-        // slidesOffsetAfter: Padding.XXL,
+        centeredSlides: false,
       },
     },
   });
+
+  setPaginationPosition(swiper);
 
   return swiper;
 };
 
 if (document.querySelector(`.${REVIEWS_SLIDER_CLASS}`)) {
-  // handleSwiperMode(initReviewsSwiper);
   initReviewsSwiper();
 }
