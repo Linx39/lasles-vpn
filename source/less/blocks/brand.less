@@ -4,6 +4,17 @@
 
   padding-top: 26px;
   padding-bottom: 26px;
+
+  filter: grayscale(1);
+  opacity: .2;
+
+  transition: filter .5s, opacity .5s;
+
+  &:hover,
+  &:focus-visible {
+    filter: none;
+    opacity: .7;
+  }
 }
 
 .brand img {

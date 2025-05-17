@@ -7,6 +7,10 @@ const initBrandsSwiper = () => {
     slidesPerView: 'auto',
     spaceBetween: 60,
     touchReleaseOnEdges: true,
+    loop: true,
+    // autoplay: {
+    //   delay: 2000,
+    // },
 
     breakpoints: {
       [Width.MD]: {
