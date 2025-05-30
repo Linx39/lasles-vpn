@@ -20,8 +20,6 @@
   }
 
   @media (min-width: @xxl-width) {
-    // margin-right: auto;
-    // margin-left: auto;
     padding-right: var(--xxl-padding);
     padding-left: var(--xxl-padding);
   }
@@ -35,6 +33,7 @@
 .burger-icon(@width, @height) {
   &::before{
     position: absolute;
+    content: "";
     right: 0;
     left: 0;
     transform: translateY(-50%);
@@ -45,8 +44,6 @@
 
     background-color: currentColor;
     box-shadow: 0 calc((-@height) / 2 + 1px) currentColor, 0 calc(@height / 2 - 1px) currentColor;
-
-    content: "";
   }
 }
 
@@ -81,10 +78,47 @@
   }
 }
 
-.interactive-default {
-  .focus-default();
+.hover-default {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
 
   &:hover {
-    color: var(--color-accent);
+    opacity: .8;
+  }
+}
+
+.active-default {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+
+  &:active {
+    opacity: .9;
+  }
+}
+
+.interactive-default {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: -5%;
+    bottom: 2px;
+
+    width: 110%;
+    height: 2px;
+
+    background-color: var(--color-accent);
+
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: transform .5s ease-in-out;
+  }
+
+  .focus-default();
+
+  &:hover::after {
+    transform: scale(1);
+    transform-origin: bottom right;
   }
 }

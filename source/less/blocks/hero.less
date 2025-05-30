@@ -8,15 +8,13 @@
   gap: 20px;
 
   @media (min-width: @md-width) {
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: 1fr min-content;
     grid-template-rows: min-content min-content 1fr;
     gap: 20px 50px;
   }
 
   @media (min-width: @xl-width) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content 1fr;
-    gap: 20px 50px;
 
     padding-right: 0;
   }
@@ -63,18 +61,15 @@
 
 .hero__btn {
   order: 1;
-  // margin: 0 auto;
   justify-self: center;
 
   @media (min-width: @md-width) {
-    order: unset;
-    justify-self: start;
     align-self: center;
   }
 
   @media (min-width: @xl-width) {
-    // margin-left: 0;
-    // margin-right: 0;
+    order: unset;
+    justify-self: start;
   }
 }
 

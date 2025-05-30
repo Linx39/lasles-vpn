@@ -10,10 +10,8 @@
   padding: 5px 10px;
 
   font-weight: 500;
-
   color: var(--color-accent);
-
-  border: 1px solid var(--color-accent);
+  border: 1px solid currentColor;
   border-radius: 50px;
 
   transition: color .5s, background-color .5s, opacity .5s;
@@ -34,19 +32,14 @@
     opacity: 0;
   }
 
-  &:hover,
-  &:focus-visible {
+  .focus-default();
+
+  &:hover {
     color: var(--color-font-secondary);
     background-color: var(--color-accent);
-
-    outline: none;
 
     &::after {
       opacity: 1;
     }
-  }
-
-  @media (min-width: @xl-width) {
-    width: 150px;
   }
 }

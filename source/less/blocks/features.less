@@ -15,8 +15,6 @@
 
   @media (min-width: @xl-width) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr min-content min-content;
-    gap: 20px 50px;
   }
 }
 
@@ -91,14 +89,15 @@
 .features__item {
   position: relative;
 
+  display: flex;
+  align-items: center;
+
   padding-left: 34px;
 
   &::before {
     position: absolute;
     content: "";
     left: 2px;
-    top: 0;
-    bottom: 0;
 
     width: 21px;
     height: 21px;

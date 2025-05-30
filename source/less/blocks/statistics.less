@@ -30,7 +30,7 @@
   }
 
   @media (min-width: @md-width) {
-    // max-width: var(--md-max-width);
+    max-width: var(--md-max-width);
   }
 
   @media (min-width: @xl-width) {
@@ -38,7 +38,6 @@
     grid-template-columns: 1fr 38% 1fr;
 
     max-width: unset;
-
   }
 }
 
@@ -49,7 +48,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 5px 36.5px;
 
-  min-height: 160px;
+  min-height: 200px;
   padding: 20px;
 
   &:not(:last-of-type)::after {
@@ -67,8 +66,6 @@
   }
 
   @media (min-width: @xl-width) {
-    min-height: 200px;
-
     &:not(:last-of-type)::after {
       left: unset;
       right: -1px;
@@ -124,5 +121,4 @@
 .statistics__name {
   font-size: 20px;
   line-height: 30px;
-
 }

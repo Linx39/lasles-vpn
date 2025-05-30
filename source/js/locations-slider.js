@@ -1,9 +1,9 @@
 import { Width } from "./const.js";
 
-const BRANDS_SLIDER_CLASS = 'brands-slider';
+const LOCATIONS_SLIDER_CLASS = 'locations-slider';
 
-const initBrandsSwiper = () => {
-  const swiper = new Swiper(`.${BRANDS_SLIDER_CLASS}`, {
+const initLocationsSwiper = () => {
+  const swiper = new Swiper(`.${LOCATIONS_SLIDER_CLASS}`, {
     slidesPerView: 'auto',
     spaceBetween: 60,
     touchReleaseOnEdges: true,
@@ -22,6 +22,6 @@ const initBrandsSwiper = () => {
   return swiper;
 };
 
-if (document.querySelector(`.${BRANDS_SLIDER_CLASS}`)) {
-  initBrandsSwiper();
+if (document.querySelector(`.${LOCATIONS_SLIDER_CLASS}`)) {
+  initLocationsSwiper();
 }

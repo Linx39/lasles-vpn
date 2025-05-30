@@ -13,6 +13,7 @@
 
   color: var(--color-font-secondary);
   background-color: var(--color-accent);
+
   border-radius: 10px;
 
   &::before {
@@ -27,8 +28,5 @@
     filter: blur(54px);
   }
 
-  &:hover,
-  &:focus-visible {
-    outline: none;
-  }
+  .focus-default();
 }

@@ -85,7 +85,7 @@
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: 10px;
+  gap: 20px;
 
   @media (min-width: @xl-width) {
     flex-direction: row;
@@ -94,42 +94,32 @@
 }
 
 .header__site-link {
-  padding: 6px 0;
-
-  // @media (min-width: @xl-width) {
-  //   padding: 13px 0;
-  // }
+  .interactive-default();
 }
 
 .header__user-list {
+  align-self: end;
+
   display: flex;
   flex-direction: column;
-  align-items: end;
-  gap: 10px;
+  align-items: center;
+  gap: 30px;
 
   @media (min-width: @xl-width) {
     flex-direction: row;
-    align-items: center;
-    gap: 30px;
   }
 }
 
 .header__user-link {
-  width: 100px;
 
   &--in {
-    color: inherit;
-
-    @media (min-width: @xl-width) {
-      width: auto;
-      border: none;
-    }
+    font-weight: 500;
+    
+    .interactive-default();
   }
 
   &--up {
-    @media (min-width: @xl-width) {
       width: 150px;
-    }
   }
 }
 
