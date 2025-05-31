@@ -20,9 +20,9 @@
   position: relative;
 
   display: grid;
-  gap: 20px;
+  column-gap: 20px;
 
-  padding: 58.5px 35px;
+  padding: 55px 35px;
 
   background-color: var(--color-back-basic);
   border-radius: 10px;
@@ -46,24 +46,30 @@
 
   @media (min-width: @xl-width) {
     grid-template-columns: 1fr min-content;
-    gap: 20px 200px;
 
-    padding: 58.5px 70px;
+    padding: 55px 70px;
   }
 }
 
 .subscribe__title {
+  margin: 0 auto;
+
+  line-height: 45px;
   text-align: center;
 
   @media (min-width: @xl-width) {
+    margin: 0;
     text-align: left;
   }
 }
 
 .subscribe__text {
+  margin: 0 auto;
+
   text-align: center;
 
   @media (min-width: @xl-width) {
+    margin: 0;
     text-align: left;
   }
 }

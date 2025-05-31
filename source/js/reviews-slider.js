@@ -27,7 +27,7 @@ const initReviewsSwiper = () => {
       bulletActiveClass: 'pagination__btn--current',
       lockClass: 'pagination--lock',
       dynamicBullets: true,
-      dynamicMainBullets: 1,
+      dynamicMainBullets: 3,
     },
 
     breakpoints: {

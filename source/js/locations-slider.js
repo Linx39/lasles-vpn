@@ -5,7 +5,7 @@ const LOCATIONS_SLIDER_CLASS = 'locations-slider';
 const initLocationsSwiper = () => {
   const swiper = new Swiper(`.${LOCATIONS_SLIDER_CLASS}`, {
     slidesPerView: 'auto',
-    spaceBetween: 60,
+    spaceBetween: 47,
     touchReleaseOnEdges: true,
     loop: true,
     // autoplay: {

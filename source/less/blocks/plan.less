@@ -9,7 +9,7 @@
   width: 100%;
   max-width: 330px;
   min-height: 760px;
-  padding: 275px 40px 50px;
+  padding: 273px 40px 50px;
 
   background-color: var(--color-back-basic);
   border-radius: 10px;
@@ -18,18 +18,28 @@
   &::before {
     position: absolute;
     content: "";
-    top: 80px;
+    top: 77px;
     left: 0;
     right: 0;
 
     width: 146px;
     height: 167px;
     margin: 0 auto;
-
-    background-image: url("../images/icons/plan.svg");
     background-size: 146px 167px;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  &--free::before {
+    background-image: url("../images/icons/plan-free.svg");
+  }
+
+  &--standart::before {
+    background-image: url("../images/icons/plan-standart.svg");
+  }
+
+  &--premium::before {
+    background-image: url("../images/icons/plan-premium.svg");
   }
 
   &:has(a:hover, a:focus-visible),
@@ -86,4 +96,8 @@
   & span {
     font-weight: 500;
   }
+}
+
+.plan__btn {
+  width: 178px;
 }
