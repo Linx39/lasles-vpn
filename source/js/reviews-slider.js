@@ -23,9 +23,9 @@ const initReviewsSwiper = () => {
     pagination: {
       el: '.reviews-pagination',
       clickable: true,
-      bulletClass: 'pagination__btn',
-      bulletActiveClass: 'pagination__btn--current',
-      lockClass: 'pagination--lock',
+      bulletClass: 'pagination-btn',
+      bulletActiveClass: 'pagination-btn--current',
+      lockClass: 'slider__pagination--lock',
       dynamicBullets: true,
       dynamicMainBullets: 3,
     },

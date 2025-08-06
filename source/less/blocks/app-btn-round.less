@@ -32,11 +32,12 @@
     opacity: 0;
   }
 
-  .focus-default();
-
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: var(--color-font-secondary);
     background-color: var(--color-accent);
+
+    outline: none;
 
     &::after {
       opacity: 1;

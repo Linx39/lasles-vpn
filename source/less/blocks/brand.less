@@ -10,7 +10,13 @@
 
   transition: filter .5s, opacity .5s;
 
-  &:hover {
+  &--prev,
+  &--next {
+    filter: none;
+    opacity: .4;
+  }
+
+  &--current {
     filter: none;
     opacity: .7;
   }

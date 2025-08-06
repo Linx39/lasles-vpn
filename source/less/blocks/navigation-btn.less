@@ -29,6 +29,8 @@
     mask-size: 20px 18px;
     mask-repeat: no-repeat;
     mask-position: center;
+
+    transition: background-color .5s;
   }
 
   &--next::after {
@@ -44,16 +46,14 @@
     display: none;
   }
 
-  .focus-default();
-
   &:not(&--disabled)&:hover,
   &:focus-visible {
     background-color: var(--color-accent);
+
+    outline: none;
 
     &::after {
       background-color: var(--color-back-basic);
     }
   }
-
-  .active-default();
 }

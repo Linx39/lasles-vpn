@@ -42,9 +42,10 @@
     background-image: url("../images/icons/plan-premium.svg");
   }
 
+  transition: border-color .5s ease-in-out;
+
   &:has(a:hover, a:focus-visible),
-  &:hover,
-  &--current {
+  &:hover {
     border-color: var(--color-accent);
   }
 }

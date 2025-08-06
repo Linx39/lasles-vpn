@@ -8,22 +8,12 @@
   gap: 20px;
 
   @media (min-width: @md-width) {
-    grid-template-columns: 1fr min-content;
-    grid-template-rows: min-content min-content 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px 50px;
   }
 
   @media (min-width: @xl-width) {
-    // grid-template-columns: 1fr 1fr;
-    grid-template-columns: 1fr 612px;
     grid-template-rows: min-content min-content min-content;
-
-    padding-right: 0;
-  }
-
-  @media (min-width: @xxl-width) {
-    padding-right: 83px;
-    // padding-right: var(--xxl-padding);
   }
 }
 
@@ -37,7 +27,7 @@
 
   color: var(--color-font-title);
 
-  & span {
+  & b {
     font-weight: 700;
   }
 
@@ -59,6 +49,10 @@
   margin: 0 auto;
 
   text-align: center;
+
+  & b {
+    font-weight: 500;
+  }
 
   @media (min-width: @md-width) {
     grid-column: 1 / -1;

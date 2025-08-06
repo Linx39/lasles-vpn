@@ -34,7 +34,7 @@ export const setPaginationPosition = (swiper) => {
     const isWidth = window.matchMedia(`(min-width: ${Width.SM}px)`).matches;
 
     if (isWidth) {
-      const paginationBtnStyleLeft = paginationElement.querySelector('.pagination__btn').style.left;
+      const paginationBtnStyleLeft = paginationElement.querySelector('.pagination-btn').style.left;
 
       paginationElement.style.left = '-' + paginationBtnStyleLeft;
     }

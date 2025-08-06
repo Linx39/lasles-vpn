@@ -23,17 +23,24 @@
 
   padding-top: 60px;
 
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 .slider__control .slider__pagination {
   position: relative;
-  // position: static;
   top: 0;
   bottom: 0;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--lock {
+    display: none;
+  }
+
   @media (min-width: @sm-width) {
-    // left: 0 !important;
+    justify-content: start;
     margin-right: auto;
 
     transform: translateX(0) !important;

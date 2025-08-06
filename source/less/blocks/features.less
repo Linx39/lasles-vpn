@@ -8,14 +8,12 @@
   gap: 20px;
 
   @media (min-width: @md-width) {
-    grid-template-columns: 1fr max-content;
-    grid-template-rows: 1fr min-content min-content;
+    grid-template-columns: 1fr 1fr;
     gap: 20px 50px;
   }
 
   @media (min-width: @xl-width) {
-    // grid-template-columns: 1fr 1fr;
-    grid-template-columns: 582px 1fr;
+    grid-template-rows: 1fr min-content min-content;
   }
 
   @media (min-width: @xxl-width) {
@@ -72,7 +70,6 @@
     width: auto;
     max-width: unset;
     margin: 0;
-    // padding: 0 35px;
   }
 }
 
@@ -89,14 +86,12 @@
   gap: 15px;
 
   @media (min-width: @md-width) {
-    justify-self: start;
     align-self: center;
   }
 
-  // @media (min-width: @xl-width) {
-  //   justify-self: start;
-  //   align-self: auto;
-  // }
+  @media (min-width: @xl-width) {
+    justify-self: start;
+  }
 }
 
 .features__item {

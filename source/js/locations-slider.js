@@ -1,21 +1,19 @@
-import { Width } from "./const.js";
-
 const LOCATIONS_SLIDER_CLASS = 'locations-slider';
 
 const initLocationsSwiper = () => {
   const swiper = new Swiper(`.${LOCATIONS_SLIDER_CLASS}`, {
     slidesPerView: 'auto',
     spaceBetween: 47,
+    slideActiveClass: 'brand--current',
+    slidePrevClass: 'brand--prev',
+    slideNextClass: 'brand--next',
+    watchSlidesProgress: true,
+    slideFullyVisibleClass: 'brand--visible',
     touchReleaseOnEdges: true,
+    centeredSlides: true,
     loop: true,
-    // autoplay: {
-    //   delay: 2000,
-    // },
-
-    breakpoints: {
-      [Width.MD]: {
-        centeredSlides: false,
-      },
+    autoplay: {
+      delay: 2000,
     },
   });
 

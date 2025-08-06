@@ -9,11 +9,9 @@ const initPricingSwiper = () => {
     spaceBetween: 50,
     slideActiveClass: 'plan--current',
     touchReleaseOnEdges: true,
-    slideToClickedSlide: true,
     centerInsufficientSlides: true,
     slideToClickedSlide: true,
     centeredSlides: true,
-    // parallax: true,
 
     breakpoints: {
       [Width.MD]: {
@@ -31,11 +29,11 @@ const initPricingSwiper = () => {
     pagination: {
       el: '.pricing-pagination',
       clickable: true,
-      bulletClass: 'pagination__btn',
-      bulletActiveClass: 'pagination__btn--current',
-      lockClass: 'pagination--lock',
+      bulletClass: 'pagination-btn',
+      bulletActiveClass: 'pagination-btn--current',
+      lockClass: 'slider__pagination--lock',
       dynamicBullets: true,
-      dynamicMainBullets: 1,
+      dynamicMainBullets: 3,
     },
   });
 
