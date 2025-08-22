@@ -11,7 +11,7 @@ const initPricingSwiper = () => {
     touchReleaseOnEdges: true,
     centerInsufficientSlides: true,
     slideToClickedSlide: true,
-    centeredSlides: true,
+    // centeredSlides: true,
 
     breakpoints: {
       [Width.MD]: {

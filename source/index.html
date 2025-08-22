@@ -6,7 +6,7 @@
     <meta name="description" content="Service LaslesVPN">
     <title>Service LaslesVPN</title>
     <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./aos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
   </head>
   <body class="page__body">
@@ -112,43 +112,49 @@
             <h2 class="pricing__title" data-aos="fade-up" data-aos-duration="400">Choose Your Plan</h2>
             <p class="pricing__text" data-aos="fade-up" data-aos-duration="700">Let's choose the package that is best for you and explore it happily and cheerfully.</p>
 
-            <div class="slider swiper pricing-slider" data-aos="fade-up" data-aos-duration="1300">
+            <div class="slider swiper pricing-slider">
               <div class="slider__list swiper-wrapper">
-                <div class="slider__item plan plan--free swiper-slide">
-                  <h3 class="plan__title">Free Plan</h3>
-                  <ul class="plan__list">
-                    <li class="plan__item">Unlimited Bandwitch</li>
-                    <li class="plan__item">Encrypted Connection</li>
-                    <li class="plan__item">No Traffic Logs</li>
-                    <li class="plan__item">Works on All Devices</li>
-                  </ul>
-                  <p class="plan__value"><b>Free</b></p>
-                  <a class="plan__btn app-btn-round" href="#">Select</a>
+                <div class="slider__item swiper-slide">
+                  <div class="plan plan--free" data-aos="fade-up" data-aos-duration="700">
+                    <h3 class="plan__title">Free Plan</h3>
+                    <ul class="plan__list">
+                      <li class="plan__item">Unlimited Bandwitch</li>
+                      <li class="plan__item">Encrypted Connection</li>
+                      <li class="plan__item">No Traffic Logs</li>
+                      <li class="plan__item">Works on All Devices</li>
+                    </ul>
+                    <p class="plan__value"><b>Free</b></p>
+                    <a class="plan__btn app-btn-round" href="#">Select</a>
+                  </div>
                 </div>
-                <div class="slider__item plan plan--standart swiper-slide">
-                  <h3 class="plan__title">Standard Plan</h3>
-                  <ul class="plan__list">
-                    <li class="plan__item">Unlimited Bandwitch</li>
-                    <li class="plan__item">Encrypted Connection</li>
-                    <li class="plan__item">No Traffic Logs</li>
-                    <li class="plan__item">Works on All Devices</li>
-                    <li class="plan__item">Connect Anyware</li>
-                  </ul>
-                  <p class="plan__value"><b>$9</b> / mo</p>
-                  <a class="plan__btn app-btn-round" href="#">Select</a>
+                <div class="slider__item swiper-slide">
+                  <div class="plan plan--standart" data-aos="fade-up" data-aos-duration="900">
+                    <h3 class="plan__title">Standard Plan</h3>
+                    <ul class="plan__list">
+                      <li class="plan__item">Unlimited Bandwitch</li>
+                      <li class="plan__item">Encrypted Connection</li>
+                      <li class="plan__item">No Traffic Logs</li>
+                      <li class="plan__item">Works on All Devices</li>
+                      <li class="plan__item">Connect Anyware</li>
+                    </ul>
+                    <p class="plan__value"><b>$9</b> / mo</p>
+                    <a class="plan__btn app-btn-round" href="#">Select</a>
+                  </div>
                 </div>
-                <div class="slider__item plan plan--premium swiper-slide">
-                  <h3 class="plan__title">Premium Plan</h3>
-                  <ul class="plan__list">
-                    <li class="plan__item">Unlimited Bandwitch</li>
-                    <li class="plan__item">Encrypted Connection</li>
-                    <li class="plan__item">No Traffic Logs</li>
-                    <li class="plan__item">Works on All Devices</li>
-                    <li class="plan__item">Connect Anyware</li>
-                    <li class="plan__item">Get New Features</li>
-                  </ul>
-                  <p class="plan__value"><b>$12</b> / mo</p>
-                  <a class="plan__btn app-btn-round" href="#">Select</a>
+                <div class="slider__item swiper-slide">
+                  <div class="plan plan--premium" data-aos="fade-up" data-aos-duration="1100">
+                    <h3 class="plan__title">Premium Plan</h3>
+                    <ul class="plan__list">
+                      <li class="plan__item">Unlimited Bandwitch</li>
+                      <li class="plan__item">Encrypted Connection</li>
+                      <li class="plan__item">No Traffic Logs</li>
+                      <li class="plan__item">Works on All Devices</li>
+                      <li class="plan__item">Connect Anyware</li>
+                      <li class="plan__item">Get New Features</li>
+                    </ul>
+                    <p class="plan__value"><b>$12</b> / mo</p>
+                    <a class="plan__btn app-btn-round" href="#">Select</a>
+                  </div>
                 </div>
               </div>
 
@@ -413,7 +419,7 @@
     <div class="overlay"></div>
 
     <script src="./swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./aos/aos.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

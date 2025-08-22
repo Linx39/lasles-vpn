@@ -11,7 +11,7 @@ const initReviewsSwiper = () => {
     touchReleaseOnEdges: true,
     centerInsufficientSlides: true,
     slideToClickedSlide: true,
-    centeredSlides: true,
+    // centeredSlides: true,
 
     navigation: {
       prevEl: '.reviews-btn-prev',
