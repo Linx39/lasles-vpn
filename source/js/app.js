@@ -5,4 +5,6 @@ import './reviews-slider.js';
 import './counters.js';
 import './site-list.js';
 
-AOS.init();
+AOS.init({
+  once: true,
+});
