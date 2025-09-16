@@ -101,9 +101,9 @@ export const copy = (done) => {
     `${SOURCE_FOLDER}/aos/*.*`,
     // `${SOURCE_FOLDER}/fancybox/*.*`,
     // `${SOURCE_FOLDER}/pristine/*.*`,
-    // `${SOURCE_FOLDER}/favicons/*.*`,
-    // `${SOURCE_FOLDER}/*.ico`,
-    // `${SOURCE_FOLDER}/manifest.json`,
+    `${SOURCE_FOLDER}/favicons/*.*`,
+    `${SOURCE_FOLDER}/*.ico`,
+    `${SOURCE_FOLDER}/manifest.json`,
   ], {
     base: `${SOURCE_FOLDER}`
   })
