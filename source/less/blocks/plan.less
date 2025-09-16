@@ -1,4 +1,9 @@
 .plan {
+  width: 100%;
+  max-width: 330px;
+}
+
+.plan__wrapper {
   position: relative;
 
   display: flex;
@@ -6,15 +11,18 @@
   align-items: center;
   gap: 20px;
 
-  width: 100%;
-  max-width: 330px;
-  // width: 330px;
   min-height: 760px;
   padding: 273px 40px 50px;
 
   background-color: var(--color-back-basic);
   border-radius: 10px;
   border: 2px solid var(--color-grey-05);
+
+  transition: border-color .5s ease-in-out;
+
+  &:has(a:hover, a:focus-visible) {
+    border-color: var(--color-accent);
+  }
 
   &::before {
     position: absolute;
@@ -31,22 +39,16 @@
     background-position: center;
   }
 
-  &--free::before {
+  .plan--free &::before {
     background-image: url("../images/icons/plan-free.svg");
   }
 
-  &--standart::before {
+  .plan--standart &::before {
     background-image: url("../images/icons/plan-standart.svg");
   }
 
-  &--premium::before {
+  .plan--premium &::before {
     background-image: url("../images/icons/plan-premium.svg");
-  }
-
-  transition: border-color .5s ease-in-out;
-
-  &:has(a:hover, a:focus-visible) {
-    border-color: var(--color-accent);
   }
 }
 

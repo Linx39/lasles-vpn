@@ -7,14 +7,13 @@ const initPricingSwiper = () => {
   const swiper = new Swiper(`.${PRICING_SLIDER_CLASS}`, {
     slidesPerView: 'auto',
     spaceBetween: 50,
-    slideActiveClass: 'plan--current',
     touchReleaseOnEdges: true,
     centerInsufficientSlides: true,
     slideToClickedSlide: true,
-    // centeredSlides: true,
+    centeredSlides: true,
 
     breakpoints: {
-      [Width.MD]: {
+      [Width.SM]: {
         centeredSlides: false,
       },
     },
