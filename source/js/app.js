@@ -4,6 +4,7 @@ import './locations-slider.js';
 import './reviews-slider.js';
 import './counters.js';
 import './site-list.js';
+import './scroll-up.js';
 
 AOS.init({
   once: true,

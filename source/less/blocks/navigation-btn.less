@@ -14,6 +14,10 @@
 
   transition: background-color .5s, opacity .5s;
 
+  &--up {
+    opacity: .6;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -35,6 +39,10 @@
 
   &--next::after {
     transform: rotate(180deg);
+  }
+
+  &--up::after {
+    transform: rotate(90deg);
   }
 
   &--disabled {

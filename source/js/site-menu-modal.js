@@ -26,6 +26,10 @@ window.addEventListener("resize", () => {
   setModalMode();
 })
 
-const closeSiteMenu = () => modal.close();
+const closeSiteMenu = () => {
+  if (modal) {
+    modal.close();
+  }
+};
 
 export {closeSiteMenu};
