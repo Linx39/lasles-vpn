@@ -1,6 +1,12 @@
 .user {
   width: 100%;
   max-width: 400px;
+
+  z-index: 0;
+
+  &:hover {
+    z-index: 10;
+  }
 }
 
 .user__wrapper {
@@ -17,6 +23,9 @@
   background-color: var(--color-white);
   border: 2px solid var(--color-grey-05);
   border-radius: 10px;
+
+  transform: scale(1);
+  transition: transform .5s;
 
   &::before {
     position: absolute;
@@ -35,6 +44,10 @@
 
     transition: opacity .5s;
   }
+}
+
+.user:hover .user__wrapper {
+  transform: scale(1.4);
 }
 
 .user__photo {
