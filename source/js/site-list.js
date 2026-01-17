@@ -17,9 +17,9 @@ siteLists.forEach(list => {
         localStorage.setItem('globalAnchor', '0');
         scroll(anchor);
 
-        elementByAncor.setAttribute('tabindex', '-1');
-        elementByAncor.focus();
-        elementByAncor.blur();
+        // elementByAncor.setAttribute('tabindex', '-1');
+        // elementByAncor.focus();
+        // elementByAncor.blur();
 
       } else {
         localStorage.setItem('globalAnchor', anchor);

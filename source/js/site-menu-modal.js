@@ -13,7 +13,7 @@ const setModalMode = () => {
 
   if (isDesktopWidth && modal) {
     modal.close();
-    modal.reset();
+    modal.show();
 
     modal = null;
   }

@@ -1,6 +1,6 @@
 import { isEscEvent, isTabEvent } from "./utils.js";
 import { activateOverlay, deactivateOverlay } from "./overlay.js";
-// import { scrollUp } from "./scroll-up.js";
+import { scrollUp } from "./scroll-up.js";
 
 const FOCUS_ELEMENTS = [
   'a[href]',
@@ -20,7 +20,7 @@ const MODAL_OPENED_CLASS = 'modal--opened';
 const MODAL_CLOSE_BTN_CLASS = 'modal__close-btn';
 
 const body = document.querySelector('.page__body');
-// const fixedElements = [scrollUp];
+const fixedElements = [scrollUp];
 let prevModal;
 
 const initModal = (modalElement, beforeOpen, afterClose) => {
@@ -42,36 +42,18 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
       prevModal.close();
     }
 
-    prevModal = modal;
-
     if (beforeOpen) {
       beforeOpen();
     }
 
-    const scrollYWidth = window.innerWidth - document.documentElement.clientWidth;
-
-    body.style.overflowY = 'hidden';
-    body.style.marginRight = `${scrollYWidth}px`;
-
-    // if (fixedElements) {
-    //   fixedElements.forEach(element => {
-    //     element.style.marginRight = `${scrollYWidth}px`;
-    //   })
-    // }
+    prevModal = modal;
+    isOpened = true;
 
     modalElement.classList.add(MODAL_OPENED_CLASS);
-    modalElement.setAttribute('aria-hidden', 'false');
-    modalElement.setAttribute('tabindex', '0');
-    modalElement.style.marginRight = `${scrollYWidth}px`;
-
+    showModal();
+    controlListener();
+    controlElementScroll();
     activateOverlay();
-
-    document.addEventListener(`keydown`, onEscKeyDown);
-    document.addEventListener(`keydown`, onTabKeyDown);
-    document.addEventListener('mousedown', onMouseDown);
-    document.addEventListener('mouseup', onMouseUp);
-
-    isOpened = true;
 
     modalElement.focus();
   }
@@ -80,34 +62,74 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     if(!isOpened) {
       return;
     }
-    
-    starterElement.focus();
-
-    body.removeAttribute('style');
-
-    // if (fixedElements) {
-    //   fixedElements.forEach(element => {
-    //     element.style.marginRight = ``;
-    //   })
-    // }
-
-    modalElement.classList.remove(MODAL_OPENED_CLASS);
-    modalElement.setAttribute('aria-hidden', 'true');
-    modalElement.setAttribute('tabindex', '-1');
-    modalElement.style.marginRight = ``;
-
-    deactivateOverlay();
-
-    document.removeEventListener('keydown', onEscKeyDown);
-    document.removeEventListener('keydown', onTabKeyDown);
-    document.removeEventListener('mousedown', onMouseDown);
-    document.removeEventListener('mouseup', onMouseUp);
 
     prevModal = null;
     isOpened = false;
 
+    modalElement.classList.remove(MODAL_OPENED_CLASS);
+    hiddenModal();
+    controlListener();
+    controlElementScroll();
+    deactivateOverlay();
+
+    starterElement.focus();
+
     if (afterClose) {
       afterClose();
+    }
+  }
+
+  const hiddenModal = () => {
+    modalElement.setAttribute('aria-hidden', 'true');
+    modalElement.setAttribute('tabindex', '-1');
+  }
+
+  const showModal = () => {
+    modalElement.setAttribute('aria-hidden', 'false');
+    modalElement.setAttribute('tabindex', '0');
+  }
+
+  const controlListener = () => {
+    if(isOpened) {
+      document.addEventListener(`keydown`, onEscKeyDown);
+      document.addEventListener(`keydown`, onTabKeyDown);
+      document.addEventListener('mousedown', onMouseDown);
+      document.addEventListener('mouseup', onMouseUp);
+    }
+
+    if (!isOpened) {
+      document.removeEventListener('keydown', onEscKeyDown);
+      document.removeEventListener('keydown', onTabKeyDown);
+      document.removeEventListener('mousedown', onMouseDown);
+      document.removeEventListener('mouseup', onMouseUp);
+    }
+  }
+
+  const controlElementScroll = () => {
+    if (isOpened) {
+      const scrollYWidth = window.innerWidth - document.documentElement.clientWidth;
+
+      body.style.overflowY = 'hidden';
+      body.style.marginRight = `${scrollYWidth}px`;
+      modalElement.style.marginRight = `${scrollYWidth}px`;
+
+      if (fixedElements) {
+        fixedElements.forEach(element => {
+          element.style.marginRight = `${scrollYWidth}px`;
+        })
+      }
+    }
+
+    if (!isOpened) {
+      body.style.overflowY = '';
+      body.style.marginRight = '';
+      modalElement.style.marginRight = ``;
+
+      if (fixedElements) {
+        fixedElements.forEach(element => {
+          element.style.marginRight = ``;
+        })
+      }
     }
   }
 
@@ -158,14 +180,6 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     }
   }
 
-  const resetModal = () => {
-    modalElement.setAttribute('aria-hidden', 'false');
-    modalElement.setAttribute('tabindex', '0');
-  }
-
-  modalElement.setAttribute('aria-hidden', 'true');
-  modalElement.setAttribute('tabindex', '-1');
-
   modalOpenBtns.forEach(btn => {
     btn.addEventListener('click', (evt) => {
       starterElement = btn;
@@ -180,12 +194,15 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     })
   })
 
+  hiddenModal();
+
   const modal = {
     element: modalElement,
     isOpened: isOpened,
     close() {closeModal()},
     open() {openModal()},
-    reset() {resetModal()},
+    show() {showModal()},
+    hidden() {hiddenModal},
   }
 
   return modal;
