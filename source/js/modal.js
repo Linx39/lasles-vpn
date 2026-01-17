@@ -22,7 +22,6 @@ const MODAL_CLOSE_BTN_CLASS = 'modal__close-btn';
 const body = document.querySelector('.page__body');
 // const fixedElements = [scrollUp];
 let prevModal;
-let lastFocusElement;
 
 const initModal = (modalElement, beforeOpen, afterClose) => {
   const modalWrapper = modalElement.querySelector(`.${MODAL_WRAPPER_CLASS}`);
@@ -32,14 +31,11 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
   const nodes = modalElement.querySelectorAll(FOCUS_ELEMENTS);
   const nodesArray = [...nodes];
   let isOpened = false;
+  let starterElement;
 
   const openModal = () => {
     if(isOpened) {
       return;
-    }
-
-    if(!prevModal) {
-      lastFocusElement = document.activeElement;
     }
 
     if (prevModal) {
@@ -84,6 +80,8 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     if(!isOpened) {
       return;
     }
+    
+    starterElement.focus();
 
     body.removeAttribute('style');
 
@@ -160,8 +158,17 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     }
   }
 
+  const resetModal = () => {
+    modalElement.setAttribute('aria-hidden', 'false');
+    modalElement.setAttribute('tabindex', '0');
+  }
+
+  modalElement.setAttribute('aria-hidden', 'true');
+  modalElement.setAttribute('tabindex', '-1');
+
   modalOpenBtns.forEach(btn => {
     btn.addEventListener('click', (evt) => {
+      starterElement = btn;
       openModal();
     })
   })
@@ -178,6 +185,7 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     isOpened: isOpened,
     close() {closeModal()},
     open() {openModal()},
+    reset() {resetModal()},
   }
 
   return modal;

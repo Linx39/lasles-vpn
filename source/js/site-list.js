@@ -11,10 +11,16 @@ siteLists.forEach(list => {
       closeSiteMenu();
       const local = link.getAttribute('href').split('#')[0];
       const anchor = link.getAttribute('href').split('#')[1];
+      const elementByAncor = document.getElementById(`${anchor}`);
 
-      if (document.getElementById(`${anchor}`)) {
+      if (elementByAncor) {
         localStorage.setItem('globalAnchor', '0');
         scroll(anchor);
+
+        elementByAncor.setAttribute('tabindex', '-1');
+        elementByAncor.focus();
+        elementByAncor.blur();
+
       } else {
         localStorage.setItem('globalAnchor', anchor);
         window.location.href = local;
