@@ -7,13 +7,10 @@
   display: grid;
   gap: 20px;
 
-  @media (min-width: @md-width) {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 50px;
-  }
-
   @media (min-width: @xl-width) {
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
+    gap: 20px 50px;
   }
 }
 
@@ -84,6 +81,10 @@
   width: 100%;
   max-width: var(--md-max-width);
   margin: 40px auto;
+
+  @media (min-width: @md-width) {
+    // margin: 0;
+  }
 
   @media (min-width: @xl-width) {
     grid-column: 2 / -1;
