@@ -78,7 +78,7 @@ export const createWebp = () => {
   return gulp.src([
     `${SOURCE_FOLDER}/images/**/*.{jpg,png}`,
   ])
-    .pipe(webp({quality: 60}))
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest(`${PUBLIC_FOLDER}/images`))
 }
 

@@ -32,14 +32,18 @@
     <header  class="page__header header">
       <div class="header__wrapper wrapper">
         <a class="header__logo logo" href="#">
-          <img src="./images/logo.webp" alt="Company logo." width="149" height="37" fetchpriority="high">
+          <picture>
+            <img src="images/logo.webp" srcset="images/logo@2x.webp 2x" alt="Company logo." width="149" height="37" fetchpriority="high">
+          </picture>
         </a>
 
         <div class="modal modal--right modal--deactivate" id="site-menu" aria-hidden="false" tabindex="0">
           <div class="header__nav modal__wrapper" role="dialog" aria-modal="true">
             <div class="header__nav-top">
               <a class="header__logo logo" href="#">
-                <img src="./images/logo.webp" alt="Company logo." width="149" height="37">
+                <picture>
+                  <img src="images/logo.webp" srcset="images/logo@2x.webp 2x" alt="Company logo." width="149" height="37" loading="lazy">
+                </picture>
               </a>
 
               <button class="cross-btn modal__close-btn">
@@ -79,8 +83,8 @@
 
           <div class="hero__bg" data-aos="fade-up" data-aos-duration="1000">
             <picture>
-              <source media="(min-width: 768px)" srcset="./images/hero-desktop.webp">
-              <img src="./images/hero-mobile.webp" alt="Decorative image.">
+              <source media="(min-width: 768px)" srcset="images/hero-desktop.webp 1x, images/hero-desktop@2x.webp 2x">
+              <img src="images/hero-mobile.webp" srcset="images/hero-mobile@2x.webp 2x" alt="Decorative image.">
             </picture>
           </div>
         </div>
@@ -117,8 +121,8 @@
 
           <div class="features__bg" data-aos="fade-up" data-aos-duration="1000">
             <picture>
-              <source media="(min-width: 768px)" srcset="./images/features-desktop.webp">
-              <img src="./images/features-mobile.webp" alt="Decorative image." loading="lazy">
+              <source media="(min-width: 768px)" srcset="images/features-desktop.webp 1x, images/features-desktop@2x.webp 2x">
+              <img src="images/features-mobile.webp" srcset="images/features-mobile@2x.webp 2x" alt="Decorative image." loading="lazy">
             </picture>
           </div>
 
@@ -203,7 +207,12 @@
             <p class="locations__text" data-aos="fade-up" data-aos-duration="700">See LaslesVPN everywhere to make it easier for you when you move locations.</p>
 
             <div class="locations__bg" data-aos="fade-up" data-aos-duration="1000">
-              <img src="./images/locations.webp" alt="Декоративное изображение." loading="lazy">
+              <picture>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="images/locations-desktop.webp 1x, images/locations-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="images/locations-tablet.webp 1x, images/locations-tablet@2x.webp 2x">
+                <img src="images/locations-mobile.webp" srcset="images/locations-mobile@2x.webp 2x" alt="Decorative image." loading="lazy">
+              </picture>
               <div class="locations__point locations__point--big locations__point--1"></div>
               <div class="locations__point locations__point--big locations__point--2"></div>
               <div class="locations__point locations__point--small locations__point--3"></div>
@@ -218,36 +227,56 @@
             <div class="swiper slider locations-slider">
               <div class="swiper-wrapper slider__list">
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/netflix.webp" alt="Логотип netflix." width="200" height="114" loading="lazy">
+                  <picture>
+                    <img src="images/netflix.webp" srcset="images/netflix@2x.webp 2x" alt="Logo netflix." width="200" height="114" loading="lazy">
+                  </picture>
                 </div>
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/reddit.webp" alt="Логотип reddit." width="157" height="52" loading="lazy">
+                  <picture>
+                    <img src="images/reddit.webp" srcset="images/reddit@2x.webp 2x" alt="Logo reddit." width="157" height="52" loading="lazy">
+                  </picture>
                 </div>
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/amazon.webp" alt="Логотип amazon." width="278" height="210" loading="lazy">
+                  <picture>
+                    <img src="images/amazon.webp" srcset="images/amazon@2x.webp 2x" alt="Logo amazon." width="278" height="210" loading="lazy">
+                  </picture>
                 </div>
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/discord.webp" alt="Логотип discord." width="188" height="64" loading="lazy">
+                  <picture>
+                    <img src="images/discord.webp" srcset="images/discord@2x.webp 2x" alt="Logo discord." width="188" height="64" loading="lazy">
+                  </picture>
                 </div>
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/spotify.webp" alt="Логотип spotify." width="172" height="52" loading="lazy">
+                  <picture>
+                    <img src="images/spotify.webp" srcset="images/spotify@2x.webp 2x" alt="Logo spotify." width="172" height="52" loading="lazy">
+                  </picture>
                 </div>
 
 
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/netflix.webp" alt="Логотип netflix." width="200" height="114" loading="lazy">
+                  <picture>
+                    <img src="images/netflix.webp" srcset="images/netflix@2x.webp 2x" alt="Logo netflix." width="200" height="114" loading="lazy">
+                  </picture>
                 </div>
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/reddit.webp" alt="Логотип reddit." width="157" height="52" loading="lazy">
+                  <picture>
+                    <img src="images/reddit.webp" srcset="images/reddit@2x.webp 2x" alt="Logo reddit." width="157" height="52" loading="lazy">
+                  </picture>
                 </div>
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/amazon.webp" alt="Логотип amazon." width="278" height="210" loading="lazy">
+                  <picture>
+                    <img src="images/amazon.webp" srcset="images/amazon@2x.webp 2x" alt="Logo amazon." width="278" height="210" loading="lazy">
+                  </picture>
                 </div>
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/discord.webp" alt="Логотип discord." width="188" height="64" loading="lazy">
+                  <picture>
+                    <img src="images/discord.webp" srcset="images/discord@2x.webp 2x" alt="Logo discord." width="188" height="64" loading="lazy">
+                  </picture>
                 </div>
                 <div class="slider__item brand swiper-slide">
-                  <img src="./images/spotify.webp" alt="Логотип spotify." width="172" height="52" loading="lazy">
+                  <picture>
+                    <img src="images/spotify.webp" srcset="images/spotify@2x.webp 2x" alt="Logo spotify." width="172" height="52" loading="lazy">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -265,7 +294,9 @@
               <div class="slider__item user swiper-slide">
                 <div class="user__wrapper">
                   <div class="user__photo">
-                    <img src="./images/user-1.webp" alt="Фото пользователя." width="50" height="50" loading="lazy">
+                    <picture>
+                      <img src="images/user-1.webp" srcset="images/user-1@2x.webp 2x" alt="User's photo." width="50" height="50" loading="lazy">
+                    </picture>
                   </div>
                   <div class="user__personal">
                     <h3 class="user__name">Viezh Robert</h3>
@@ -278,7 +309,9 @@
               <div class="slider__item user swiper-slide">
                 <div class="user__wrapper">
                   <div class="user__photo">
-                    <img src="./images/user-2.webp" alt="Фото пользователя." width="50" height="50" loading="lazy">
+                    <picture>
+                      <img src="images/user-2.webp" srcset="images/user-2@2x.webp 2x" alt="User's photo." width="50" height="50" loading="lazy">
+                    </picture>
                   </div>
                   <div class="user__personal">
                     <h3 class="user__name">Yessica Christy</h3>
@@ -291,7 +324,9 @@
               <div class="slider__item user swiper-slide">
                 <div class="user__wrapper">
                   <div class="user__photo">
-                    <img src="./images/user-3.webp" alt="Фото пользователя." width="50" height="50" loading="lazy">
+                    <picture>
+                      <img src="images/user-3.webp" srcset="images/user-3@2x.webp 2x" alt="User's photo." width="50" height="50" loading="lazy">
+                    </picture>
                   </div>
                   <div class="user__personal">
                     <h3 class="user__name">Kim Young Jou</h3>
@@ -305,7 +340,9 @@
               <div class="slider__item user swiper-slide">
                 <div class="user__wrapper">
                   <div class="user__photo">
-                    <img src="./images/user-1.webp" alt="Фото пользователя." width="50" height="50" loading="lazy">
+                    <picture>
+                      <img src="images/user-1.webp" srcset="images/user-1@2x.webp 2x" alt="User's photo." width="50" height="50" loading="lazy">
+                    </picture>
                   </div>
                   <div class="user__personal">
                     <h3 class="user__name">Viezh Robert</h3>
@@ -318,7 +355,9 @@
               <div class="slider__item user swiper-slide">
                 <div class="user__wrapper">
                   <div class="user__photo">
-                    <img src="./images/user-2.webp" alt="Фото пользователя." width="50" height="50" loading="lazy">
+                    <picture>
+                      <img src="images/user-2.webp" srcset="images/user-2@2x.webp 2x" alt="User's photo." width="50" height="50" loading="lazy">
+                    </picture>
                   </div>
                   <div class="user__personal">
                     <h3 class="user__name">Yessica Christy</h3>
@@ -331,7 +370,9 @@
               <div class="slider__item user swiper-slide">
                 <div class="user__wrapper">
                   <div class="user__photo">
-                    <img src="./images/user-3.webp" alt="Фото пользователя." width="50" height="50" loading="lazy">
+                    <picture>
+                      <img src="images/user-3.webp" srcset="images/user-3@2x.webp 2x" alt="User's photo." width="50" height="50" loading="lazy">
+                    </picture>
                   </div>
                   <div class="user__personal">
                     <h3 class="user__name">Kim Young Jou</h3>
@@ -341,11 +382,12 @@
                   <p class="user__text">“This is very unusual for my business that currently requires a virtual private network that has high security.”.</p>
                 </div>
               </div>
-
               <div class="slider__item user swiper-slide">
                 <div class="user__wrapper">
                   <div class="user__photo">
-                    <img src="./images/user-1.webp" alt="Фото пользователя." width="50" height="50" loading="lazy">
+                    <picture>
+                      <img src="images/user-1.webp" srcset="images/user-1@2x.webp 2x" alt="User's photo." width="50" height="50" loading="lazy">
+                    </picture>
                   </div>
                   <div class="user__personal">
                     <h3 class="user__name">Viezh Robert</h3>
@@ -358,7 +400,9 @@
               <div class="slider__item user swiper-slide">
                 <div class="user__wrapper">
                   <div class="user__photo">
-                    <img src="./images/user-2.webp" alt="Фото пользователя." width="50" height="50" loading="lazy">
+                    <picture>
+                      <img src="images/user-2.webp" srcset="images/user-2@2x.webp 2x" alt="User's photo." width="50" height="50" loading="lazy">
+                    </picture>
                   </div>
                   <div class="user__personal">
                     <h3 class="user__name">Yessica Christy</h3>
@@ -371,7 +415,9 @@
               <div class="slider__item user swiper-slide">
                 <div class="user__wrapper">
                   <div class="user__photo">
-                    <img src="./images/user-3.webp" alt="Фото пользователя." width="50" height="50" loading="lazy">
+                    <picture>
+                      <img src="images/user-3.webp" srcset="images/user-3@2x.webp 2x" alt="User's photo." width="50" height="50" loading="lazy">
+                    </picture>
                   </div>
                   <div class="user__personal">
                     <h3 class="user__name">Kim Young Jou</h3>
@@ -417,7 +463,9 @@
 
         <div class="footer__head">
           <a class="footer__logo logo" href="#" data-aos="fade-up" data-aos-duration="400">
-            <img src="./images/logo.webp" alt="Company logo." width="149" height="37" loading="lazy">
+            <picture>
+              <img src="images/logo.webp" srcset="images/logo@2x.webp 2x" alt="Company logo." width="149" height="37" loading="lazy">
+            </picture>
           </a>
           <p class="footer__text" data-aos="fade-up" data-aos-duration="400">
             <span>LaslesVPN</span> is a private virtual network that has unique features and has high security.
