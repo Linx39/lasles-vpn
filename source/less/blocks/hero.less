@@ -78,6 +78,8 @@
 }
 
 .hero__bg {
+  position: relative;
+
   width: 100%;
   max-width: var(--md-max-width);
   margin: 40px auto;
@@ -96,8 +98,53 @@
   }
 }
 
-.hero__bg img {
+.hero__img {
   width: 100%;
   aspect-ratio: 612 / 383;
   object-fit: contain;
+}
+
+.hero__decor {
+  position: absolute;
+
+  animation: spin 5s linear infinite;
+
+  &--1 {
+    top: 0;
+    left: 2.5%;
+    width: 16.7%;
+  }
+
+  &--2 {
+    top: 0;
+    left: 52.8%;
+    width: 12.5%;
+
+    animation-delay: 1s;
+  }
+
+  &--3 {
+    top: 35.1%;
+    left: 11.2%;
+    width: 11.4%;
+
+    animation-delay: 2s;
+  }
+
+  &--4 {
+    top: 17%;
+    left: 71.5%;
+    width: 18.4%;
+
+    animation-delay: 3s;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
