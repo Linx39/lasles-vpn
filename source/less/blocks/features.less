@@ -53,29 +53,6 @@
   }
 }
 
-.features__bg {
-  width: 100%;
-  max-width: var(--md-max-width);
-  margin: 40px auto;
-
-  @media (min-width: @xl-width) {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    align-self: center;
-    justify-self: center;
-
-    width: auto;
-    max-width: unset;
-    margin: 0;
-  }
-}
-
-.features__bg img {
-  width: 100%;
-  aspect-ratio: 510/ 416;
-  object-fit: contain;
-}
-
 .features__list {
   justify-self: center;
 
@@ -111,5 +88,156 @@
     background-size: 21px 21px;
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+
+.features__bg {
+  position: relative;
+
+  width: 100%;
+  max-width: var(--md-max-width);
+  margin: 40px auto;
+
+  @media (min-width: @xl-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    align-self: center;
+    justify-self: center;
+
+    width: auto;
+    max-width: unset;
+    margin: 0;
+  }
+}
+
+.features__img {
+  width: 100%;
+  aspect-ratio: 511/ 416;
+  object-fit: contain;
+}
+
+.features__decor {
+  position: absolute;
+
+  aspect-ratio: 1 / 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--heart {
+    top: 16.6%;
+    width: 6%;
+    background-image: url(../../images/features-decor-1.svg);
+    animation: fadeInUp 3s ease-out infinite;
+  }
+
+  &--01 {
+    left: 37%;
+    animation-delay: 2s;
+  }
+
+  &--02 {
+    left: 48%;
+    animation-delay: 1.5s;
+  }
+
+  &--03 {
+    left: 40.7%;
+    animation-delay: 1s;
+  }
+
+  &--04 {
+    left: 50.1%;
+    animation-delay: .5s;
+  }
+
+  &--05 {
+    left: 34.3%;
+    width: 6%;
+  }
+
+
+  &--star {
+    background-image: url(../../images/features-decor-2.svg);
+    animation: fade 2s ease-in-out infinite;
+  }
+
+  &--06 {
+    top: 29.9%;
+    left: 10.4%;
+    width: 3.7%;
+    animation-delay: 1.5s;
+  }
+
+  &--07 {
+    top: 34.4%;
+    left: 19.4%;
+    width: 2.5%;
+    animation-delay: 1s;
+  }
+
+  &--08 {
+    top: 39.1%;
+    left: 24.3%;
+    width: 3.7%;
+    animation-delay: .5s;
+  }
+
+  &--09 {
+    top: 48%;
+    left: 10.7%;
+    width: 5.5%;
+    animation-delay: 0;
+  }
+
+  &--10 {
+    top: 29.9%;
+    left: 79.9%;
+    width: 3.7%;
+    animation-delay: 0s;
+  }
+
+  &--11 {
+    top: 34.4%;
+    left: 72.3%;
+    width: 2.5%;
+    animation-delay: .5s;
+  }
+
+  &--12 {
+    top: 39.1%;
+    left: 66.2%;
+    width: 3.7%;
+    animation-delay: 1s;
+  }
+
+  &--13 {
+    top: 48%;
+    left: 78.4%;
+    width: 5.5%;
+    animation-delay: 1.5s;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-225%) scale(.45);
   }
 }

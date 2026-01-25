@@ -107,18 +107,26 @@
 .hero__decor {
   position: absolute;
 
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
   animation: spin 5s linear infinite;
 
   &--1 {
     top: 0;
     left: 2.5%;
     width: 16.7%;
+    aspect-ratio: 98 / 77;
+    background-image: url(../../images/hero-decor-1.svg);
   }
 
   &--2 {
     top: 0;
     left: 52.8%;
     width: 12.5%;
+    aspect-ratio: 73 / 57;
+    background-image: url(../../images/hero-decor-2.svg);
 
     animation-delay: 1s;
   }
@@ -127,16 +135,20 @@
     top: 35.1%;
     left: 11.2%;
     width: 11.4%;
+    aspect-ratio: 109 / 80;
+    background-image: url(../../images/hero-decor-3.svg);
 
-    animation-delay: 2s;
+    animation-delay: 3s;
   }
 
   &--4 {
     top: 17%;
     left: 71.5%;
     width: 18.4%;
+    aspect-ratio: 98 / 77;
+    background-image: url(../../images/hero-decor-4.svg);
 
-    animation-delay: 3s;
+    animation-delay: 2s;
   }
 }
 
