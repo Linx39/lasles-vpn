@@ -16,7 +16,7 @@
   border: 1px solid currentColor;
   border-radius: 22.5px;
 
-  transition: color .5s, background-color .5s, opacity .5s;
+  transition: color .5s ease-in-out, background-color .5s ease-in-out;
 
   &::after {
     position: absolute;
@@ -32,6 +32,8 @@
     filter: blur(54px);
 
     opacity: 0;
+
+    transition: opacity .5s ease-in-out;
   }
 
   &:hover,

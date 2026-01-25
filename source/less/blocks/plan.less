@@ -12,23 +12,27 @@
   gap: 20px;
 
   height: 100%;
-  min-height: 760px;
-  padding: 273px 40px 50px;
+  min-height: 680px;
+  padding: 226px 40px 40px;
 
   background-color: var(--color-back-basic);
   border-radius: 10px;
-  border: 2px solid var(--color-grey-05);
 
-  transition: border-color .5s ease-in-out;
+  box-shadow: 0px 13px 18px 0px #11132314;
 
-  &:has(a:hover, a:focus-visible) {
-    border-color: var(--color-accent);
+  transform: scale(1);
+
+  transition: transform .5s ease-in-out;
+
+  &:has(a:hover, a:focus-visible),
+  &:hover {
+    transform: scale(1.05);
   }
 
   &::before {
     position: absolute;
     content: "";
-    top: 77px;
+    top: 30px;
     left: 0;
     right: 0;
 
