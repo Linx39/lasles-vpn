@@ -84,7 +84,7 @@
           <div class="hero__bg" data-aos="fade-up" data-aos-duration="1000">
             <picture>
               <source media="(min-width: 768px)" srcset="images/hero-desktop.webp 1x, images/hero-desktop@2x.webp 2x">
-              <img class="hero__img" src="images/hero-mobile.webp" srcset="images/hero-mobile@2x.webp 2x" alt="Decorative image.">
+              <img class="hero__img" src="images/hero-mobile.webp" srcset="images/hero-mobile@2x.webp 2x" alt="Decorative image." fetchpriority="high">
             </picture>
             <div class="hero__decor hero__decor--1"></div>
             <div class="hero__decor hero__decor--2"></div>
@@ -228,10 +228,9 @@
 
             <div class="locations__bg" data-aos="fade-up" data-aos-duration="1000">
               <picture>
-              <picture>
                 <source media="(min-width: 1200px)" srcset="images/locations-desktop.webp 1x, images/locations-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="images/locations-tablet.webp 1x, images/locations-tablet@2x.webp 2x">
-                <img src="images/locations-mobile.webp" srcset="images/locations-mobile@2x.webp 2x" alt="Decorative image." loading="lazy">
+                <img class="locations__img" src="images/locations-mobile.webp" srcset="images/locations-mobile@2x.webp 2x" alt="Decorative image." loading="lazy">
               </picture>
               <div class="locations__point locations__point--big locations__point--1"></div>
               <div class="locations__point locations__point--big locations__point--2"></div>

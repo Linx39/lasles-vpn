@@ -93,10 +93,16 @@
 
 .features__bg {
   position: relative;
+  left: calc(-1 * var(--sm-padding));
 
-  width: 100%;
-  max-width: var(--md-max-width);
+  width: calc(100% + 2 * var(--sm-padding));
   margin: 40px auto;
+
+  @media (min-width: @md-width) {
+    width: 100%;
+    max-width: var(--md-max-width);
+    left: auto;
+  }
 
   @media (min-width: @xl-width) {
     grid-column: 1 / 2;

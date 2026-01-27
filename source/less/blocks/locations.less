@@ -21,12 +21,20 @@
 
 .locations__bg {
   position: relative;
-  max-width: 1060px;
+  left: calc(-1 * var(--sm-padding));
+
+  width: calc(100% + 2 * var(--sm-padding));
   margin: 0 auto;
   margin-bottom: 85px;
+
+  @media (min-width: @md-width) {
+    width: 100%;
+    max-width: 1060px;
+    left: auto;
+  }
 }
 
-.locations__bg img {
+.locations__img {
   width: 100%;
   aspect-ratio: 1060 / 538;
   object-fit: contain;
